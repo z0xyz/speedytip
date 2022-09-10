@@ -1,0 +1,142 @@
+/* global css rules  */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+}
+
+img.icon {
+    height: 90px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* start  */
+
+.grid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(100,1%);
+    grid-template-columns: repeat(100,1%);
+}
+
+/* overlay sing-in usrename page */
+
+div.user-name {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(129, 127, 116);
+    opacity: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.user-name > label {
+    color: rgb(29, 34, 29);
+    font-style: oblique;
+    font-weight:lighter;
+    font-size:larger;
+}
+div.user-name > input#username {
+    height: 30px;
+    width: 250px;
+    border: solid gray 2px;
+    border-radius: 5px;
+    background-color: honeydew;
+}
+
+div.user-name > button {
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    color: rgb(171, 177, 168);
+    background-color: rgb(73, 83, 87);
+}
+
+
+/* overlay resutls page  */
+div.results {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(199, 201, 195);
+    color: rgb(10, 10, 9);
+    opacity: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* grid areas  */
+
+/* row 1  */
+
+div.score {
+    grid-row: 5/11;
+    grid-column: 5/10;
+}
+div.grid > div.words {
+    grid-row: 10/40;
+    grid-column: 20/80;
+    word-spacing: 4px;
+}
+
+div.grid > textarea#input {
+    grid-row: 50/60;
+    grid-column: 20/80;
+}
+
+/* grid container  */
+
+/* grid score  */
+
+div.score {
+    border:solid fuchsia 1px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+div.score > p.score-header {
+    background-color: gainsboro;
+}
+
+/* grid words  */
+div.grid > div.words {
+    border: solid rgb(120, 110, 209) 3px;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(58, 59, 44);
+}
+
+div.grid > div.words > p.word {
+    display: inline;
+    padding: 3px;
+    font-style: oblique;
+    font-size: larger;
+}
+
+div.grid > div.words > p.highlight {
+    border: solid rgb(132, 120, 206) 1px;
+    color: floralwhite;
+    background-color: darkviolet;
+    border-radius: 3px;
+}
+
+/* grid textarea */
+div.grid > textarea {
+    border: solid rgb(190, 32, 32) 2px;
+    border-radius: 5px;
+    padding: 5px;
+}
